@@ -2,7 +2,7 @@
   "name": "lab",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "ngapps",
+  "prefix": "app",
   "sourceRoot": "apps/lab/src",
   "tags": [],
   "targets": {

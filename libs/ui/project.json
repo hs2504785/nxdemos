@@ -2,7 +2,7 @@
   "name": "ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ui/src",
-  "prefix": "ngapps",
+  "prefix": "app",
   "tags": [],
   "projectType": "library",
   "targets": {
