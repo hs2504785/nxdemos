@@ -2,7 +2,11 @@
   "name": "@ngapps/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve lab",
+    "build": "nx build lab",
+    "test": "nx test lab"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.2.0",
