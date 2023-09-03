@@ -1,0 +1,10 @@
+<h1>Customizing Cells</h1>
+
+<ag-grid-angular
+  style="width: 100%; height: 400px"
+  class="ag-theme-alpine"
+  [columnDefs]="columnDefs"
+  [defaultColDef]="defaultColDef"
+  [rowData]="rowData$ | async"
+  (gridReady)="onGridReady($event)"
+></ag-grid-angular>

@@ -1,0 +1,39 @@
+<app-sub-header> Alert Host </app-sub-header>
+
+<div class="px-4 py-2">
+  <h2>Static Alert</h2>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields
+    below.
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+    ></button>
+  </div>
+  <h2 class="mt-5">Dynamic Alert</h2>
+  <p>Parallel to host ( outside host )</p>
+  <button
+    class="btn btn-primary mb-3 me-2"
+    (click)="addAlert('my test alert outside')"
+  >
+    Add Alert outside ( as modal )
+  </button>
+  <button
+    class="btn btn-primary mb-3"
+    (click)="addAlertOutside('my test alert outside')"
+  >
+    Add Alert outside (scroll down to see added alert)
+  </button>
+
+  <h2 class="mt-5">Dynamic Alert to specific location</h2>
+  <p>Inside Host DOM</p>
+  <button
+    class="btn btn-primary mb-3"
+    (click)="addAlertInline('my test alert inside')"
+  >
+    Add Alert inside
+  </button>
+  <ng-template uiHost></ng-template>
+</div>

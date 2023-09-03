@@ -1,0 +1,11 @@
+<app-sub-header> With Virtual Scrolling </app-sub-header>
+
+<div class="px-4 py-2">
+  <cdk-virtual-scroll-viewport itemSize="37" class="vs-container border w-50">
+    <ul class="list-group">
+      <li class="list-group-item" *cdkVirtualFor="let item of items">
+        {{ item }}
+      </li>
+    </ul>
+  </cdk-virtual-scroll-viewport>
+</div>

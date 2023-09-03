@@ -1,0 +1,36 @@
+<app-sub-header> Material Slider </app-sub-header>
+
+<div class="px-4 py-2">
+  <div class="slider w-25 mb-3">
+    <mat-slider min="0" max="100000" step="1000" discrete>
+      <input matSliderThumb />
+    </mat-slider>
+  </div>
+  <div class="slider w-50 mb-3">
+    <mat-slider min="0" max="100000" step="1000" discrete>
+      <input matSliderThumb />
+    </mat-slider>
+  </div>
+  <div class="slider w-75 mb-3">
+    <mat-slider discrete>
+      <input
+        matSliderThumb
+        [(ngModel)]="value"
+        (valueChange)="onValueChange($event)"
+      />
+    </mat-slider>
+  </div>
+  <div class="slider mb-3">
+    <mat-slider min="0" max="100000" step="1000" discrete>
+      <input matSliderThumb />
+    </mat-slider>
+  </div>
+
+  <h2 class="mt-5">Slider Range</h2>
+  <div class="slider w-50 mb-3">
+    <mat-slider min="0" max="100" step="1" discrete [displayWith]="formatLabel">
+      <input value="10" matSliderStartThumb />
+      <input value="100" matSliderEndThumb />
+    </mat-slider>
+  </div>
+</div>

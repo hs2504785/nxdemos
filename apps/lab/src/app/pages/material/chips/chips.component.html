@@ -1,0 +1,28 @@
+<app-sub-header> Chips </app-sub-header>
+
+<div class="px-4 py-2">
+  <mat-form-field class="example-chip-list">
+    <mat-label>Favorite Fruits</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Enter fruits">
+      <mat-chip-row
+        *ngFor="let fruit of fruits"
+        (removed)="remove(fruit)"
+        [editable]="true"
+        (edited)="edit(fruit, $event)"
+        [aria-description]="'press enter to edit ' + fruit.name"
+      >
+        {{ fruit.name }}
+        <button matChipRemove [attr.aria-label]="'remove ' + fruit.name">
+          <i class="gi-close"></i>
+        </button>
+      </mat-chip-row>
+      <input
+        placeholder="New fruit..."
+        [matChipInputFor]="chipGrid"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        [matChipInputAddOnBlur]="addOnBlur"
+        (matChipInputTokenEnd)="add($event)"
+      />
+    </mat-chip-grid>
+  </mat-form-field>
+</div>

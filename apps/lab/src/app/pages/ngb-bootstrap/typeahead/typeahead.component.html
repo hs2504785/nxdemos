@@ -1,0 +1,57 @@
+<app-sub-header title="Typeahead"> Bootstrap Typeahead </app-sub-header>
+
+<div class="px-4 py-2">
+  <h2>Basic Typeahead</h2>
+  <label for="typeahead-basic">Search for a state:</label>
+  <input
+    id="typeahead-basic"
+    type="text"
+    class="form-control"
+    [(ngModel)]="model"
+    [ngbTypeahead]="search"
+  />
+  <hr />
+  <pre>Model: {{ model | json }}</pre>
+
+  <h2 class="mt-5">Wikipedia search</h2>
+
+  A typeahead example that gets values from the <code>WikipediaService</code>
+  <ul>
+    <li>remote data retrieval</li>
+    <li><code>debounceTime</code> operator</li>
+    <li><code>tap</code> operator</li>
+    <li><code>distinctUntilChanged</code> operator</li>
+    <li><code>switchMap</code> operator</li>
+    <li>
+      <code>catch</code> operator to display an error message in case of
+      connectivity issue
+    </li>
+  </ul>
+
+  <fieldset>
+    <div class="mb-3 row">
+      <label for="typeahead-http" class="col-xs-3 col-sm-auto col-form-label"
+        >Search for a wiki page:</label
+      >
+      <div class="col">
+        <input
+          id="typeahead-http"
+          type="text"
+          class="form-control"
+          [class.is-invalid]="searchFailed"
+          [(ngModel)]="model"
+          [ngbTypeahead]="searchWiki"
+          placeholder="Wikipedia search"
+        />
+        <small *ngIf="searching" class="form-text text-muted"
+          >searching...</small
+        >
+        <div class="invalid-feedback" *ngIf="searchFailed">
+          Sorry, suggestions could not be loaded.
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <hr />
+  <pre>Model: {{ model | json }}</pre>
+</div>

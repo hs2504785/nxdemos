@@ -1,0 +1,78 @@
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+#main {
+  margin-top: 60px;
+  padding: 20px 30px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 1199px) {
+  #main {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #main,
+  #footer {
+    margin-left: 300px;
+  }
+}
+
+// @media (max-width: 1199px) {
+//   .toggle-sidebar .sidebar {
+//     left: 0;
+//   }
+// }
+
+@media (min-width: 1200px) {
+  .toggle-sidebar #main,
+  .toggle-sidebar #footer {
+    margin-left: 0;
+  }
+
+  // .toggle-sidebar .sidebar {
+  //   left: -300px;
+  // }
+}
+
+/* Breadcrumbs */
+.breadcrumb {
+  font-size: 14px;
+  color: #899bbd;
+  font-weight: 600;
+}
+
+.breadcrumb a {
+  color: #899bbd;
+  transition: 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #51678f;
+}
+
+.breadcrumb .breadcrumb-item::before {
+  color: #899bbd;
+}
+
+.breadcrumb .active {
+  color: #51678f;
+  font-weight: 600;
+}
+// .korelab {
+//   overflow: hidden;
+//   display: grid;
+//   grid-template-columns: minmax(150px, 16%) 1fr;
+// }
+
+// app-sidebar,
+// main {
+//   height: calc(100vh - 60px);
+//   overflow-x: hidden !important;
+// }
+
+// app-sidebar {
+//   border-right: 1px solid #eee;
+// }

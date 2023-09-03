@@ -1,0 +1,35 @@
+<app-sub-header> Nested Tree </app-sub-header>
+
+<div class="px-4 py-2">
+  <cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <!-- This is the tree node template for leaf nodes -->
+    <cdk-nested-tree-node
+      *cdkTreeNodeDef="let node"
+      class="tree-node leaf-node"
+    >
+      <!-- use a disabled button to provide padding for tree leaf -->
+      <!-- <i mat-icon-button disabled></i> -->
+      <span class="label">{{ node.name }}</span>
+    </cdk-nested-tree-node>
+    <!-- This is the tree node template for expandable nodes -->
+    <cdk-nested-tree-node
+      *cdkTreeNodeDef="let node; when: hasChild"
+      class="tree-node root-node"
+    >
+      <i
+        [attr.aria-label]="'Toggle ' + node.name"
+        cdkTreeNodeToggle
+        class="si-carrotup"
+        [class]="{
+          'si-carrotup': !treeControl.isExpanded(node),
+          'si-chev-down': treeControl.isExpanded(node)
+        }"
+      >
+      </i>
+      <span class="label">{{ node.name }}</span>
+      <div [class.d-none]="!treeControl.isExpanded(node)">
+        <ng-container cdkTreeNodeOutlet></ng-container>
+      </div>
+    </cdk-nested-tree-node>
+  </cdk-tree>
+</div>

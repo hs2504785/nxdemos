@@ -1,0 +1,24 @@
+<app-sub-header> Virtual Scrolling </app-sub-header>
+
+<div class="px-4 py-2">
+  <div class="row">
+    <div class="col-sm-4 col-lg-3 mb-3">
+      <div class="card card-body text-center">
+        <a routerLink="without-virtual-scrolling" class="text-decoration-none"
+          >Without VS</a
+        >
+      </div>
+    </div>
+    <div class="col-sm-4 col-lg-3 mb-3">
+      <div class="card card-body text-center">
+        <a routerLink="with-virtual-scrolling" class="text-decoration-none"
+          >With VS</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-5">
+    <router-outlet></router-outlet>
+  </div>
+</div>

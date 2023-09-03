@@ -1,0 +1,120 @@
+<app-sub-header title="Modal"> Bootstrap Modal</app-sub-header>
+
+<div class="px-4 py-2">
+  <h2>Open Inline Modal</h2>
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <i
+        class="gi-close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      ></i>
+    </div>
+    <div class="modal-body">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde,Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatem
+        architecto, pariatur cum dolor reiciendis fuga ab delectus quas
+        consequatur? Quae autem quos placeat, maiores reprehenderit libero
+        praesentium totam neque?
+      </p>
+      <form>
+        <div class="mb-3">
+          <label for="dateOfBirth">Date of birth</label>
+          <div class="input-group">
+            <input
+              id="dateOfBirth"
+              class="form-control"
+              placeholder="yyyy-mm-dd"
+              name="dp"
+            />
+            <button class="btn btn-outline-secondary" type="button">
+              <i class="si-info"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-dark flex-grow-1"
+        (click)="modal.close(false)"
+      >
+        Cancel
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger flex-grow-1"
+        (click)="modal.close('Save click')"
+      >
+        Save
+      </button>
+    </div>
+  </ng-template>
+
+  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+    Launch demo modal
+  </button>
+
+  <hr />
+
+  <pre>{{ closeResult }}</pre>
+
+  <h2 class="mt-5">Components as content</h2>
+  <button class="btn btn-lg btn-outline-primary" (click)="openComponent()">
+    Launch demo modal
+  </button>
+
+  <h2 class="mt-5">Modal with option</h2>
+  <button
+    class="btn btn-lg btn-outline-primary"
+    (click)="openModalWithOption()"
+  >
+    Launch demo modal
+  </button>
+
+  <hr />
+  <h2>Open Confirm Delete</h2>
+  <ng-template #confirmDelete let-modal>
+    <div class="modal-header">
+      <div class="delete-info-icon">
+        <i class="gi-delete"></i>
+      </div>
+      <i
+        class="gi-close"
+        aria-label="Close"
+        (click)="modal.dismiss('Cross click')"
+      ></i>
+    </div>
+    <div class="modal-body">
+      <h4 class="modal-title mb-2" id="modal-basic-title">Delete version</h4>
+
+      <div>Are you sure you want to delete the version?</div>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-dark flex-grow-1"
+        (click)="modal.close(false)"
+      >
+        Cancel
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger flex-grow-1"
+        (click)="modal.close('Save click')"
+      >
+        Save
+      </button>
+    </div>
+  </ng-template>
+
+  <button
+    class="btn btn-lg btn-outline-primary"
+    (click)="openDeleteModal(confirmDelete)"
+  >
+    Confirm Delete
+  </button>
+</div>

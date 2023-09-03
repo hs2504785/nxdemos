@@ -1,0 +1,15 @@
+<div class="backdrop" (click)="onClose()"></div>
+<div
+  class="alert alert-warning alert-dismissible fade show alert-box"
+  role="alert"
+>
+  <strong>Message: {{ message }}</strong> You should check in on some of those
+  fields below.
+  <i
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+    (click)="onClose()"
+  ></i>
+</div>

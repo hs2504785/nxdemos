@@ -1,0 +1,462 @@
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar">
+  <ul class="sidebar-nav" id="sidebar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="dashboard" routerLinkActive="active">
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <!-- End Dashboard Nav -->
+
+    <li class="nav-item" ngbAccordion>
+      <div ngbAccordionItem [collapsed]="false">
+        <a class="nav-link collapsed" ngbAccordionHeader>
+          <button ngbAccordionButton>
+            <i class="bi bi-menu-button-wide"></i><span>Content</span>
+          </button>
+        </a>
+        <div ngbAccordionCollapse>
+          <ul id="components-nav" class="nav-content">
+            <li>
+              <a routerLink="content/color" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Color</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="content/typography" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Typography</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="content/tables" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Tables</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="content/images" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Images</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="content/figures" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Figures</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="content/theme" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Theme</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="content/callout" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Callout</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="content/spacing" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Spacing</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-- End Content Nav -->
+
+    <li class="nav-item" ngbAccordion>
+      <div ngbAccordionItem>
+        <a class="nav-link collapsed" ngbAccordionHeader>
+          <button ngbAccordionButton>
+            <i class="bi bi-menu-button-wide"></i><span>Components</span>
+          </button>
+        </a>
+        <div ngbAccordionCollapse>
+          <ul id="components-nav" class="nav-content">
+            <li>
+              <a routerLink="components/alerts" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Alerts</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/accordian" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Accordion</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/badge" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Badges</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/breadcrumb" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Breadcrumbs</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/buttons" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Buttons</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/card" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Cards</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/carousel" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Carousel</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/list-group" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>List group</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/modal" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Modal</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/tabs" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Tabs</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/pagination" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Pagination</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/progress" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Progress</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/spinner" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Spinners</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/tooltips" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Tooltips</span>
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="components/button-groups"
+                routerLinkActive="active"
+              >
+                <i class="bi bi-circle"></i><span>Button Group</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/btn-close" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Button Close</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/collapse" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Collapse</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="components/skelton" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Skelton</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-- End Components Nav -->
+
+    <li class="nav-item" ngbAccordion>
+      <div ngbAccordionItem>
+        <a class="nav-link collapsed" ngbAccordionHeader>
+          <button ngbAccordionButton>
+            <i class="bi bi-journal-text"></i><span>Forms</span>
+          </button>
+        </a>
+        <div ngbAccordionCollapse>
+          <ul id="components-nav" class="nav-content">
+            <li>
+              <a routerLink="forms/inputs" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Inputs</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="forms/select" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Select</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="forms/checks-and-radios" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Checks and Radios</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="forms/range" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Range</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="forms/input-groups" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Input Groups</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="forms/validation" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Validation</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="forms/form-elements" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Form Elements</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="forms/form-layouts" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Form Layouts</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="forms/form-editors" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Form Editors</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-- End Forms Nav -->
+
+    <li class="nav-item" ngbAccordion>
+      <div ngbAccordionItem>
+        <a class="nav-link collapsed" ngbAccordionHeader>
+          <button ngbAccordionButton>
+            <i class="bi bi-menu-button-wide"></i
+            ><span>Material Components</span>
+          </button>
+        </a>
+        <div ngbAccordionCollapse>
+          <ul id="components-nav" class="nav-content">
+            <li>
+              <a routerLink="material/slider" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Slider</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="material/tree" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Tree</span>
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="material/virtual-scrolling"
+                routerLinkActive="active"
+              >
+                <i class="bi bi-circle"></i><span>Virtual Scrolling</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="material/chips" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Chips</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-- End Material Components Nav -->
+
+    <li class="nav-item" ngbAccordion>
+      <div ngbAccordionItem>
+        <a class="nav-link collapsed" ngbAccordionHeader>
+          <button ngbAccordionButton>
+            <i class="bi bi-menu-button-wide"></i><span>Ngb Bootstrap</span>
+          </button>
+        </a>
+        <div ngbAccordionCollapse>
+          <ul id="components-nav" class="nav-content">
+            <li>
+              <a routerLink="aggrid/accordian" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Accordian</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="ngb-bootstrap/alert" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Alert</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="ngb-bootstrap/tooltip" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Tooltip</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="ngb-bootstrap/modal" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Modal</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="ngb-bootstrap/nav" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Nav</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="ngb-bootstrap/offcanvas" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Offcanvas</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="ngb-bootstrap/popover" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Popover</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="ngb-bootstrap/typeahead" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Typeahead</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="ngb-bootstrap/toast" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Toast</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="ngb-bootstrap/dropdown" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Dropdown</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-- End Ngb Bootstrap Nav -->
+
+    <li class="nav-item" ngbAccordion>
+      <div ngbAccordionItem>
+        <a class="nav-link collapsed" ngbAccordionHeader>
+          <button ngbAccordionButton>
+            <i class="bi bi-menu-button-wide"></i><span>AG Grid</span>
+          </button>
+        </a>
+        <div ngbAccordionCollapse>
+          <ul id="components-nav" class="nav-content">
+            <li>
+              <a routerLink="aggrid/no-aggrid" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>No AG Grid</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="aggrid/basic" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Basic Ag Grid</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="aggrid/aggrid-demo" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>AG Grid Demo</span>
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="aggrid/aggrid-enterprise"
+                routerLinkActive="active"
+              >
+                <i class="bi bi-circle"></i><span>AG Grid Enterprise</span>
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="aggrid/aggrid-customizing-cells"
+                routerLinkActive="active"
+              >
+                <i class="bi bi-circle"></i><span>Customizing Cell</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="aggrid/sort" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Ag Grid Sort</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-- End AG Grid Nav -->
+
+    <li class="nav-item" ngbAccordion>
+      <div ngbAccordionItem>
+        <a class="nav-link collapsed" ngbAccordionHeader>
+          <button ngbAccordionButton>
+            <i class="bi bi-menu-button-wide"></i><span>Demos</span>
+          </button>
+        </a>
+        <div ngbAccordionCollapse>
+          <ul id="components-nav" class="nav-content">
+            <li>
+              <a routerLink="demos/dynamic-component" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Dynamic Component</span>
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="demos/upload-with-progress"
+                routerLinkActive="active"
+              >
+                <i class="bi bi-circle"></i><span>Upload with progress</span>
+              </a>
+            </li>
+            <li>
+              <a routerLink="aggrid/upload-files" routerLinkActive="active">
+                <i class="bi bi-circle"></i><span>Upload Files</span>
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="aggrid/upload-files-tree"
+                routerLinkActive="active"
+              >
+                <i class="bi bi-circle"></i><span>Upload Files Tree</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>
+    <!-- End Demos Nav -->
+
+    <li class="nav-heading">Pages</li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="login">
+        <i class="bi bi-dash-circle"></i>
+        <span>Login</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="register">
+        <i class="bi bi-dash-circle"></i>
+        <span>register</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="not-found">
+        <i class="bi bi-dash-circle"></i>
+        <span>Error 404</span>
+      </a>
+    </li>
+    <!-- End Error 404 Page Nav -->
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" routerLink="blank">
+        <i class="bi bi-file-earmark"></i>
+        <span>Blank</span>
+      </a>
+    </li>
+    <!-- End Blank Page Nav -->
+  </ul>
+</aside>
+<!-- End Sidebar-->

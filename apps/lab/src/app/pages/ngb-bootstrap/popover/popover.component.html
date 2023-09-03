@@ -1,0 +1,86 @@
+<app-sub-header title="Popover"> Bootstrap Popover </app-sub-header>
+
+<div class="px-4 py-2">
+  <h2>Quick and easy popovers</h2>
+  <button
+    type="button"
+    class="btn btn-outline-secondary me-2"
+    placement="top"
+    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+    popoverTitle="Popover on top"
+  >
+    Popover on top
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-outline-secondary me-2"
+    placement="end"
+    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+    popoverTitle="Popover on right"
+  >
+    Popover on right
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-outline-secondary me-2"
+    placement="bottom"
+    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+    popoverTitle="Popover on bottom"
+  >
+    Popover on bottom
+  </button>
+
+  <button
+    type="button"
+    class="btn btn-outline-secondary me-2"
+    placement="start"
+    ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+    popoverTitle="Popover on left"
+  >
+    Popover on left
+  </button>
+
+  <h2 class="mt-5">HTML and bindings in popovers</h2>
+
+  <ng-template #popContent>Hello, <strong>Kore!</strong></ng-template>
+  <ng-template #popTitle>Fancy <b>content!!</b></ng-template>
+  <button
+    type="button"
+    class="btn btn-outline-secondary"
+    [ngbPopover]="popContent"
+    [popoverTitle]="popTitle"
+  >
+    I've got markup and bindings in my popover!
+  </button>
+
+  <h2 class="mt-5">Append popover in the body</h2>
+  <p>
+    This option is useful if the element triggering the popover is inside an
+    element that clips its contents
+  </p>
+  <div class="row">
+    <div class="col-auto">
+      <div class="card px-1 py-5 overflow-hidden">
+        <button
+          type="button"
+          class="btn btn-outline-secondary mb-2"
+          placement="top"
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+        >
+          Default popover
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          placement="bottom"
+          ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+          container="body"
+        >
+          Popover appended to body
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

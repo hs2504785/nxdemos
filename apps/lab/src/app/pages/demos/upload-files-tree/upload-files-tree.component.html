@@ -1,0 +1,28 @@
+<app-sub-header> Upload Files </app-sub-header>
+
+<div class="px-4 py-2">
+  <div class="upload">
+    <label for="formFileMultiple" class="form-label visually-hidden"
+      >Upload file Dnd</label
+    >
+
+    <div class="vstack gap-2 text-center p-4 kr-upload">
+      <div>Drag and Drop</div>
+      <div>OR</div>
+      <div class="kr-browse mx-auto">
+        <button class="btn btn-primary">Browse</button>
+        <input
+          type="file"
+          class="form-control"
+          id="formFileMultipleDnd"
+          (change)="onFolderSelected($event)"
+          webkitdirectory
+          multiple
+        />
+      </div>
+    </div>
+  </div>
+
+  <h2 class="mt-3">Folder List</h2>
+  <app-data-source-list [treeData]="TREE_DATA"></app-data-source-list>
+</div>

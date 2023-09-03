@@ -1,0 +1,13 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { SubHeaderComponent } from 'apps/korelab/src/shared/layout/sub-header/sub-header.component';
+
+@Component({
+  selector: 'app-color',
+  standalone: true,
+  imports: [CommonModule, SubHeaderComponent],
+  templateUrl: './color.component.html',
+  styleUrls: ['./color.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
+export class ColorComponent {}

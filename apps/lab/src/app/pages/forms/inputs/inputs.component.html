@@ -1,0 +1,222 @@
+<app-sub-header>
+  <h2 #title>Inputs</h2>
+</app-sub-header>
+
+<div class="px-4 py-2">
+  <h3>Form with button</h3>
+  <form class="row g-3 mb-3">
+    <div class="col-auto">
+      <label for="staticEmail2" class="visually-hidden">Email</label>
+      <input type="text" class="form-control" id="staticEmail2" />
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">
+        Confirm identity
+      </button>
+    </div>
+  </form>
+
+  <form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" />
+    </div>
+
+    <h3 class="mb-3">With help text</h3>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" />
+      <div id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long.
+      </div>
+    </div>
+
+    <h3 class="mb-3">With validation</h3>
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control is-invalid" id="name" />
+      <div id="validationServer03Feedback" class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" id="name" />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" />
+    </div>
+
+    <div class="mb-3">
+      <label for="formFileMultiple" class="form-label"
+        >Multiple files input example</label
+      >
+      <input class="form-control" type="file" id="formFileMultiple" multiple />
+    </div>
+
+    <div class="mb-3">
+      <label for="formFileMultiple" class="form-label">Upload file Dnd</label>
+
+      <div class="vstack gap-2 text-center p-4 kr-upload">
+        <div>Drag and Drop</div>
+        <div>OR</div>
+        <div class="kr-browse mx-auto">
+          <button class="btn btn-primary">Browse</button>
+          <input
+            type="file"
+            class="form-control"
+            id="formFileMultipleDnd"
+            multiple
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="colorPicker" class="form-label">Color Picker</label>
+      <input
+        type="color"
+        class="form-control form-control-color"
+        id="colorPicker"
+        value="#563d7c"
+        title="Choose your color"
+      />
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleDataList" class="form-label">Datalist example</label>
+      <input
+        class="form-control"
+        list="datalistOptions"
+        id="exampleDataList"
+        placeholder="Type to search..."
+      />
+      <datalist id="datalistOptions">
+        <option value="San Francisco"></option>
+        <option value="New York"></option>
+        <option value="Seattle"></option>
+        <option value="Los Angeles"></option>
+        <option value="Chicago"></option>
+      </datalist>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label"
+        >Example textarea</label
+      >
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+      ></textarea>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+
+    <div class="mb-3">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault1"
+        />
+        <label class="form-check-label" for="flexRadioDefault1">
+          Default radio
+        </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="radio"
+          name="flexRadioDefault"
+          id="flexRadioDefault2"
+          checked
+        />
+        <label class="form-check-label" for="flexRadioDefault2">
+          Default checked radio
+        </label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <h2>Variations</h2>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      placeholder="olivia@untitledui.com"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      value="olivia@untitledui.com"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      disabled
+      id="name"
+      value="olivia@untitledui.com"
+    />
+  </div>
+
+  <h2 class="mt-5">Search</h2>
+  <div class="mb-3 ki-search">
+    <label for="name" class="form-label">Search</label>
+    <input type="text" class="form-control" id="name" />
+  </div>
+
+  <div class="mb-3 ki-search-alt">
+    <label for="name" class="form-label">Search Alt</label>
+    <input type="text" class="form-control" id="name" />
+  </div>
+
+  <div class="mb-3 ki-search-alt">
+    <label for="name" class="form-label">Search Alt with cancel</label>
+    <input type="text" class="form-control" id="name" />
+    <i class="gi-close ki-search-cancel"></i>
+  </div>
+
+  <div class="mb-3 ki-search-alt">
+    <label for="name" class="form-label"
+      >Search Alt with cancel demo (type and clear out )</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      [value]="searchVal"
+      (change)="onChangeEvent($event)"
+    />
+    <i class="gi-close ki-search-cancel" (click)="cancelSearch()"></i>
+  </div>
+</div>

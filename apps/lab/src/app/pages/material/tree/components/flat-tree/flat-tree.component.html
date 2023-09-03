@@ -1,0 +1,75 @@
+<app-sub-header> Flat Tree </app-sub-header>
+
+<div class="px-4 py-2">
+  <cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <!-- This is the tree node template for leaf nodes -->
+    <cdk-tree-node
+      *cdkTreeNodeDef="let node"
+      cdkTreeNodePadding
+      [style.display]="shouldRender(node) ? 'flex' : 'none'"
+      class="tree-node"
+    >
+      <!-- use a disabled button to provide padding for tree leaf -->
+      <!-- <button mat-icon-button disabled></button> -->
+      {{ node.name }}
+    </cdk-tree-node>
+    <!-- This is the tree node template for expandable nodes -->
+    <cdk-tree-node
+      *cdkTreeNodeDef="let node; when: hasChild"
+      cdkTreeNodePadding
+      [style.display]="shouldRender(node) ? 'flex' : 'none'"
+      class="tree-node"
+    >
+      <i
+        [attr.aria-label]="'Toggle ' + node.name"
+        cdkTreeNodeToggle
+        class="si-carrotup"
+        (click)="node.isExpanded = !node.isExpanded"
+        [style.visibility]="node.expandable ? 'visible' : 'hidden'"
+        [class]="{
+          'si-carrotup': !treeControl.isExpanded(node),
+          'si-chev-down': treeControl.isExpanded(node)
+        }"
+      >
+      </i>
+
+      {{ node.name }}
+    </cdk-tree-node>
+  </cdk-tree>
+
+  <h2 class="mt-5">Flat Tree with nested data</h2>
+  <cdk-tree [dataSource]="flatDataSource" [treeControl]="treeControl">
+    <!-- This is the tree node template for leaf nodes -->
+    <cdk-tree-node
+      *cdkTreeNodeDef="let node"
+      cdkTreeNodePadding
+      class="tree-node"
+    >
+      <!-- use a disabled button to provide padding for tree leaf -->
+      <!-- <button mat-icon-button disabled></button> -->
+      {{ node.name }}
+    </cdk-tree-node>
+    <!-- This is the tree node template for expandable nodes -->
+    <cdk-tree-node
+      *cdkTreeNodeDef="let node; when: hasChild"
+      cdkTreeNodePadding
+      [style.display]="shouldRender(node) ? 'flex' : 'none'"
+      class="tree-node"
+    >
+      <i
+        [attr.aria-label]="'Toggle ' + node.name"
+        cdkTreeNodeToggle
+        class="si-carrotup"
+        (click)="node.isExpanded = !node.isExpanded"
+        [style.visibility]="node.expandable ? 'visible' : 'hidden'"
+        [class]="{
+          'si-carrotup': !treeControl.isExpanded(node),
+          'si-chev-down': treeControl.isExpanded(node)
+        }"
+      >
+      </i>
+
+      {{ node.name }}
+    </cdk-tree-node>
+  </cdk-tree>
+</div>

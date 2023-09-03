@@ -1,0 +1,66 @@
+<app-sub-header title="Offcanvas"> Bootstrap Offcanvas </app-sub-header>
+
+<div class="px-4 py-2">
+  <h2>Basic Offcanvas</h2>
+
+  <ng-template #content let-offcanvas>
+    <div class="offcanvas-header">
+      <h4 class="offcanvas-title" id="offcanvas-basic-title">Profile update</h4>
+      <i
+        type="button"
+        class="gi-close"
+        aria-label="Close"
+        (click)="offcanvas.dismiss('Cross click')"
+      ></i>
+    </div>
+    <div class="offcanvas-body">
+      <form>
+        <div class="mb-3">
+          <label for="dateOfBirth">Date of birth</label>
+          <div class="input-group">
+            <input
+              id="dateOfBirth"
+              class="form-control"
+              placeholder="yyyy-mm-dd"
+              name="dp"
+            />
+            <button class="btn btn-outline-secondary" type="button">Cal</button>
+          </div>
+        </div>
+      </form>
+      <div class="text-end">
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="offcanvas.close('Save click')"
+        >
+          Save
+        </button>
+      </div>
+    </div>
+  </ng-template>
+
+  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+    Launch demo offcanvas
+  </button>
+
+  <hr />
+
+  <pre>{{ closeResult }}</pre>
+
+  <h2 class="mt-5">Offcanvas Component</h2>
+  <button
+    class="btn btn-lg btn-outline-primary"
+    (click)="openComponentOffcanvas()"
+  >
+    Launch demo offcanvas
+  </button>
+
+  <h2 class="mt-5">Offcanvas options</h2>
+  <button
+    class="btn btn-lg btn-outline-primary"
+    (click)="openComponentOffcanvasOptions()"
+  >
+    Launch demo
+  </button>
+</div>
