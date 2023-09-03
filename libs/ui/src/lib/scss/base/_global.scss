@@ -1,0 +1,124 @@
+@import '../abstracts/variables';
+
+html,
+body {
+  height: 100%;
+}
+
+.disabled,
+[disabled] {
+  pointer-events: none;
+}
+
+.kr-title {
+  color: $gray-700;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  margin-bottom: 0;
+}
+
+.kr-subtitle {
+  color: $gray-500;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.offcanvas-title {
+  font-size: $font-size-base;
+  font-weight: bold;
+}
+
+// Custom Checkbox
+.form-check-input {
+  width: 16px;
+  height: 16px;
+}
+
+.form-check-input[type='checkbox'] {
+  &:focus,
+  &:checked {
+    box-shadow: none;
+  }
+
+  &:checked {
+    text-align: center;
+    background-size: 11px;
+  }
+}
+
+// custom radio
+.form-check-input[type='radio'] {
+  &:checked {
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+
+  &:active {
+    filter: none;
+  }
+}
+
+/*** Sub Header & Modal Header ****/
+.offcanvas-header {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+// close icon
+.gi-close {
+  opacity: 0.75;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+// Dropdown
+.kr-dropdown-toggle {
+  position: relative;
+  padding-right: 30px;
+
+  &.btn {
+    color: inherit;
+    text-align: left;
+  }
+
+  &.btn:hover {
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
+.kr-dropdown-toggle:before {
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  right: 10px;
+  top: 0;
+  transition: all 0.3s ease-in;
+  background-image: url(/assets/icons/carrot-down-comp.svg);
+  background-position: center;
+  width: 14px;
+}
+
+.show:not(.no-toggle) .kr-dropdown-toggle:before {
+  background-image: url(/assets/icons/carrot-up-comp.svg);
+}
+
+.upload .toast-body {
+  padding-top: 10px;
+}
+
+label.required::after {
+  content: '*';
+  color: $danger;
+  margin-left: 4px;
+  display: inline-block;
+}

@@ -1,0 +1,17 @@
+// @import '/node_modules/ag-grid-community/src/styles/ag-grid';
+// @import '/node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine';
+
+@use '../../../../../../../node_modules/ag-grid-community/styles' as ag;
+
+// a provided theme (alpine, alpine-dark, balham, balham-dark or material)
+@include ag.grid-styles(
+  (
+    theme: alpine,
+  )
+);
+
+// Extend aggrid theme alpine, do not add new selectors
+@import './aggrid-theme';
+
+// GALE CUSTOM AGGRID CSS GOES HERE
+@import './aggrid-custom';
