@@ -6,7 +6,15 @@
     "start": "nx serve lab",
     "build": "nx build lab",
     "test": "nx test lab",
-    "build:ui": "nx build ui"
+    "build:ui": "nx build ui",
+    "lint": "nx lint lab",
+    "lintfix": "nx lint lab --fix",
+    "generate": "ts-node ./server/generate.js > ./server/database.json",
+    "server": "ts-node ./server/server.ts",
+    "sme-build": "nx build lab --source-map",
+    "sme": "npm run sme-build && source-map-explorer dist/**/*.js --no-border-checks",
+    "wba-build": "nx build lab --stats-json",
+    "wba": "npm run wba-build && webpack-bundle-analyzer dist/apps/lab/stats.json"
   },
   "private": true,
   "dependencies": {
@@ -54,6 +62,7 @@
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
     "jest-preset-angular": "~13.1.0",
+    "json-server": "^0.17.3",
     "ng-packagr": "~16.2.0",
     "nx": "16.7.4",
     "nx-cloud": "latest",
