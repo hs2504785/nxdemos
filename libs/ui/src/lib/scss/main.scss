@@ -14,6 +14,8 @@
 // @import '../node_modules/animate.css/animate.min.css';
 
 // CUSTOM STYLES ( YOUR THEME )
+@import './base/global';
+
 // LAYOUT
 
 // @import 'layout/layout';
@@ -25,8 +27,12 @@
 // @import 'utils/animate';
 // @import 'utils/comps-animations';
 
-// // ELEMENTS
-
+// ELEMENTS
+@import 'components/scrollbar';
+// @import 'components/toast';
+// @import 'components/buttons';
+// @import 'components/modal';
+// @import 'components/forms';
 // @import 'elements/buttons';
 // @import 'elements/dropdown';
 // @import 'elements/accordions';
