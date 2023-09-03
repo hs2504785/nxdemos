@@ -1,0 +1,92 @@
+@import 'abstracts/variables';
+
+:host {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+::ng-deep {
+  .sm {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+    img {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .md {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+
+    img {
+      width: 16px;
+      width: 16px;
+    }
+  }
+
+  .lg {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .xl {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+
+    img {
+      width: 24px;
+      width: 24px;
+    }
+  }
+
+  .xxl {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+
+    img {
+      width: 28px;
+      width: 28px;
+    }
+  }
+
+  .primary ui-status-icon {
+    color: $blue;
+    background: var(--primary-100, #d1e0ff);
+  }
+
+  .secondary ui-status-icon {
+    color: $gray-600;
+    background: var(--gray-100, #f2f4f7);
+  }
+
+  .success ui-status-icon {
+    color: $green;
+    background: var(--success-100, #d1fadf);
+  }
+
+  .warning ui-status-icon {
+    color: $yellow;
+    background: var(--warning-100, #fef0c7);
+  }
+
+  .danger ui-status-icon {
+    color: $red;
+    background: var(--error-100, #fee4e2);
+  }
+}

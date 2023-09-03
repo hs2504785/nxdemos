@@ -1,0 +1,23 @@
+<div class="pagetitle">
+  <h1>{{ title }}</h1>
+  <nav>
+    <ol class="breadcrumb">
+      <li
+        class="breadcrumb-item"
+        *ngFor="let item of breadcrumbItems; let last = last"
+      >
+        <ng-container *ngIf="!last; else lastItem">
+          <ng-container *ngIf="item === 'Home'; else nonHomeItem">
+            <a [routerLink]="'/lab'">{{ item }}</a>
+          </ng-container>
+          <ng-template #nonHomeItem>
+            <a [routerLink]="['/lab', item.toLowerCase()]">{{ item }}</a>
+          </ng-template>
+        </ng-container>
+        <ng-template #lastItem>
+          {{ item }}
+        </ng-template>
+      </li>
+    </ol>
+  </nav>
+</div>

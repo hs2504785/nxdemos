@@ -1,0 +1,68 @@
+<!-- <div ngbDropdown class="kr-dropdown-input">
+  <button
+    type="button"
+    class="btn btn-outline-light kr-dropdown-toggle w-100 text-truncate"
+    id="dropdownInput"
+    ngbDropdownToggle
+  >
+    {{
+      selectedItem
+        ? selectedItem.name
+          ? selectedItem.name
+          : selectedItem
+        : 'Select'
+    }}
+  </button>
+  <ul ngbDropdownMenu>
+    <li ngbDropdownItem>
+      <ng-content></ng-content>
+    </li>
+
+    <li class="kr-input-search" *ngIf="searchable">
+      <ga-search></ga-search>
+    </li>
+
+    <li
+      ngbDropdownItem
+      *ngFor="let item of filteredData()"
+      (click)="onItemSelected(item)"
+      [innerHTML]="item.name ? item.name : item"
+    ></li>
+  </ul>
+</div> -->
+
+<div class="dropdown-ngb" ngbDropdown>
+  <button class="ngb-toggle-btn w-100" ngbDropdownToggle>
+    <span class="w-100">{{
+      selectedItem
+        ? selectedItem.name
+          ? selectedItem.name
+          : selectedItem
+        : 'Select'
+    }}</span>
+    <div class="arrow-dropdown">
+      <i class="gi-arrow-down"></i>
+    </div>
+  </button>
+  <div class="dropdown-menu-wraper w-100 mw-100" ngbDropdownMenu>
+    <li ngbDropdownItem>
+      <ng-content></ng-content>
+    </li>
+    <div class="dropdown-list-with-search">
+      <ng-container *ngIf="searchable">
+        <ga-search></ga-search>
+      </ng-container>
+      <div class="dropdown-searched-list">
+        <li
+          class="dropdown-menu-list"
+          ngbDropdownItem
+          *ngFor="let item of filteredData()"
+          (click)="onItemSelected(item)"
+          [innerHTML]="item.name ? item.name : item"
+        >
+          Job description
+        </li>
+      </div>
+    </div>
+  </div>
+</div>

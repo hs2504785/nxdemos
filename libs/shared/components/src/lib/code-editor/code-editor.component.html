@@ -1,0 +1,17 @@
+<div class="position-relative ngx-editor">
+  <button
+    class="btn btn-outline-secondary position-absolute btn-copy"
+    (click)="copyToClipboard($event)"
+    [container]="'body'"
+    ngbTooltip="Copy"
+  >
+    <i class="gi-copy"></i>
+  </button>
+
+  <ngx-monaco-editor
+    #codeEditor
+    [options]="codeEditorOptions"
+    [ngModel]="data"
+    (ngModelChange)="onDataChanged($event)"
+  ></ngx-monaco-editor>
+</div>

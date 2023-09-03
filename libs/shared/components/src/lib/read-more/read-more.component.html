@@ -1,0 +1,15 @@
+{{ content }}
+
+<ng-container *ngIf="content.length > limit">
+  <ng-container *ngIf="onlyReadMore; else toggleReadMore">
+    <a href="#" (click)="onReadMoreClick($event)">see all</a>
+  </ng-container>
+  <ng-template #toggleReadMore>
+    <a href="#" *ngIf="!isContentToggled" (click)="toggleContent($event)"
+      >Read More</a
+    >
+    <a href="#" *ngIf="isContentToggled" (click)="toggleContent($event)"
+      >Read Less</a
+    >
+  </ng-template>
+</ng-container>

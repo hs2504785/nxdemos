@@ -17,14 +17,14 @@ export const appRoutes: Route[] = [
           ),
       },
 
-      // // Content
-      // {
-      //   path: 'content',
-      //   loadChildren: () =>
-      //     import('./pages/content/content.routes').then(
-      //       (m) => m.CONTENT_ROUTES
-      //     ),
-      // },
+      // Content
+      {
+        path: 'content',
+        loadChildren: () =>
+          import('./pages/content/content.routes').then(
+            (m) => m.CONTENT_ROUTES
+          ),
+      },
 
       // {
       //   path: 'forms',
@@ -32,13 +32,13 @@ export const appRoutes: Route[] = [
       //     import('./pages/forms/forms.routes').then((mod) => mod.FORMS_ROUTES),
       // },
 
-      // {
-      //   path: 'components',
-      //   loadChildren: () =>
-      //     import('./pages/components/components.routes').then(
-      //       (mod) => mod.COMPONENTS_ROUTES
-      //     ),
-      // },
+      {
+        path: 'components',
+        loadChildren: () =>
+          import('./pages/components/components.routes').then(
+            (mod) => mod.COMPONENTS_ROUTES
+          ),
+      },
       // {
       //   path: 'material',
       //   loadChildren: () =>

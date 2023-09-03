@@ -1,0 +1,14 @@
+<div
+  class="sub-header d-flex align-items-center justify-content-between px-4 py-2"
+>
+  <div class="kr-title d-flex align-items-center">
+    <ng-content></ng-content>
+
+    <ng-container *ngIf="title">
+      <i class="si-topic-guide-1 ms-3" placement="end" [ngbTooltip]="title"></i>
+    </ng-container>
+  </div>
+  <aside class="aside">
+    <ng-content select="[aside]"></ng-content>
+  </aside>
+</div>

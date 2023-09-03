@@ -1,0 +1,42 @@
+<div class="modal-header">
+  <h4 class="modal-title" id="modal-basic-title">Edit script</h4>
+  <div class="ms-auto">
+    <span class="me-2 fs-3" *ngIf="isCopied">Copied</span>
+    <i
+      [class]="{
+        'gi-copy': !isCopied,
+        'gi-checkright': isCopied
+      }"
+      (click)="onCopyClick()"
+    ></i>
+
+    <i
+      class="gi-close ms-3"
+      aria-label="Close"
+      (click)="activeModal.dismiss()"
+    ></i>
+  </div>
+</div>
+<div class="modal-body">
+  <ui-code-editor
+    class="code-editor"
+    [data]="content"
+    (dataChanged)="onDataChanged($event)"
+  ></ui-code-editor>
+</div>
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="activeModal.dismiss()"
+  >
+    Cancel
+  </button>
+  <button
+    type="button"
+    class="btn btn-dark"
+    (click)="activeModal.close(userCode)"
+  >
+    Done
+  </button>
+</div>

@@ -1,0 +1,19 @@
+<label
+  [attr.for]="controlName"
+  class="form-label"
+  [class.required]="required"
+  >{{ label }}</label
+>
+<input
+  type="text"
+  class="form-control"
+  [class.is-invalid]="showError"
+  [formControl]="control"
+  [id]="controlName"
+  [name]="controlName"
+  [required]="required"
+  [placeholder]="placeholder"
+/>
+<div class="invalid-feedback" *ngIf="showError">
+  {{ errorMessage }}
+</div>

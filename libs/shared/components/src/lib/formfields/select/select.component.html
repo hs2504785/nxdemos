@@ -1,0 +1,15 @@
+<label [for]="controlName" class="form-label">{{ label }}</label>
+<select
+  [id]="controlName"
+  [formControl]="control"
+  class="form-select"
+  [class.is-invalid]="showError"
+>
+  <option value="">{{ defaultOptionText }}</option>
+  <option *ngFor="let option of options" [value]="option.value">
+    {{ option.name }}
+  </option>
+</select>
+<div class="invalid-feedback" *ngIf="showError">
+  {{ errorMessage }}
+</div>

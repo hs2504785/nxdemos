@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SubHeaderComponent } from 'apps/korelab/src/shared/layout/sub-header/sub-header.component';
+import { SubHeaderComponent } from '../../../layout/base-layout/sub-header/sub-header.component';
 
 @Component({
   selector: 'app-color',
